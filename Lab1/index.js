@@ -23,9 +23,9 @@ console.log(getData("Hello"));
 var items = ["bread", "milk", "butter"];
 
 // B
-const addTask = (task) => {
-    items.push(task);
-    console.log(task + " has been added to the array");
+const addTask = (item) => {
+    items.push(item);
+    console.log(item + " has been added to the array");
     return items.length;
 }
 
@@ -39,3 +39,12 @@ const listAllTasks = () => {
 };
 
 listAllTasks();
+
+// D
+const deleteTask = (item) => {
+    items = items.filter(a => a !== item); 
+    console.log(item + " has been removed from the array");
+    return items.length; 
+};
+
+console.log(deleteTask("milk"));

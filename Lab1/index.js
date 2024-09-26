@@ -30,3 +30,12 @@ const addTask = (task) => {
 }
 
 console.log(addTask("cheese"));
+
+// C
+const listAllTasks = () => {
+    items.forEach((item) => {
+        console.log("- " + item);
+    });
+};
+
+listAllTasks();

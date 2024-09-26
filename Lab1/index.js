@@ -1,3 +1,5 @@
+// QUESTION 2
+
 const getData = (variable) => variable;
 
 const getSum = (num1, num2) => num1 + num2;
@@ -12,6 +14,9 @@ const calculateAges = ages.map((age) => {
 });
 
 console.log(calculateAges);
-
 console.log(getSum(1,4));
 console.log(getData("Hello"));
+
+// QUESTION 3
+
+var items = ["bread", "milk", "butter"];

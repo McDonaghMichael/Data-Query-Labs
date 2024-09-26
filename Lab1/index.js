@@ -1,3 +1,3 @@
-const getData = () => "Data Representation and Requerying";
+const getData = (variable) => variable;
 
-console.log(getData());
+console.log(getData("Hello"));

@@ -31,7 +31,7 @@ const Read = () => {
             <h3>
                 Hello from read component
             </h3>
-            <Movies/>
+            <Movies movieData={data}/>
         </div>
     );
 }

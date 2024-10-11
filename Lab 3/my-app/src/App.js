@@ -1,10 +1,10 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
-import Footer from './components/Footer';
+import Footer from './components/global/Footer';
 import Read from './components/Read';
 import Create from './components/Create';
-import Content from './components/Content';
-import NavigationBar from './components/NavigationBar';
+import Content from './components/global/Content';
+import NavigationBar from './components/global/NavigationBar';
 
 function App() {
     return (

@@ -1,8 +1,12 @@
 import Card from 'react-bootstrap/Card';
-import { useEffect } from "react";
 
-
+/**
+ * MovieItem will display the title, year and poster of a movie
+ * and it will be displayed using the Boostrap Card
+ */
 const MovieItem = (props) => {
+
+    // MovieItem component and its data is returned in the form of a boostrap card
     return (
     <div>
         <Card>

@@ -1,15 +1,10 @@
 import React from 'react';
-
+import MovieItem from './MovieItem';
 
 const Movies = (props) => {
-    return (
-        <div>
-            <h3>
-                Hello from movies component
-            </h3>
-            {console.log(props.movieData)}
-        </div>
-    );
+    return props.movieData.forEach(function(movie) {
+                <MovieItem data={movie}/>
+            });
 }
 
 export default Movies;

@@ -1,4 +1,4 @@
-import {React, useEffect} from 'react';
+import {React, useEffect, useState} from 'react';
 import Movies from './Movies';
 import Axios from 'axios';
 
@@ -8,20 +8,16 @@ import Axios from 'axios';
 
 const Read = () => {
 
-  const data = [];
+  const [data, setMovies] = useState([]);
 
   useEffect(() => {
     Axios.get("https://jsonblob.com/api/jsonblob/1287718524221775872")
     .then((response) => {
-      response.data.movies.forEach(element => {
-        data.push(element);
-        
-      });
+      setMovies(response.data.movies);
     })
     .catch();
   })
 
-  console.log(data);
 
 
     return (

@@ -28,11 +28,14 @@ function Create() {
                 value={title}
                 onChange={(e) => { setTitle(e.target.value) }}
             />
+            <label>Add Movie Year: </label>
             <input type="number"
                 className="form-control"
                 value={year}
                 onChange={(e) => { setYear(e.target.value) }}
             />
+            <label>Add Movie Poster: </label>
+
             <input type="text"
                 className="form-control"
                 value={poster}

@@ -8,15 +8,17 @@ import Axios from 'axios';
 
 const Read = () => {
 
-  const [data, setMovies] = useState([]);
+  const [movies, setMovies] = useState([]);
 
   useEffect(() => {
     Axios.get("https://jsonblob.com/api/jsonblob/1287718524221775872")
-    .then((response) => {
-      setMovies(response.data.movies);
-    })
-    .catch();
-  })
+      .then((response) => {
+        setMovies(response.data.movies);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+    }, []);
 
 
 
@@ -25,7 +27,7 @@ const Read = () => {
             <h3>
                 Hello from read component
             </h3>
-            <Movies movieData={data}/>
+            <Movies movieData={movies}/>
         </div>
     );
 }

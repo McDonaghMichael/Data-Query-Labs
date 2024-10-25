@@ -33,6 +33,12 @@ app.get('/hello/:name/:surname', (req, res) => {
     res.send(`Hello ${name} ${surname}`);
 });
 
+app.get('/name', (req, res) => {
+    const firstname = req.query.firstname;
+    const lastname = req.query.lastname;
+    res.send(`Hello ${firstname} ${lastname}`);
+});
+
 app.post('/name', (req, res) => {
     const firstname = req.body.firstname;
     const lastname = req.body.lastname;

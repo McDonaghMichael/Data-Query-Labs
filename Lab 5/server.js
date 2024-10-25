@@ -4,6 +4,9 @@ const path = require('path');
 const app = express();
 const port = 3000;
 
+const bodyParser = require('body-parser');
+app.use(bodyParser.urlencoded({ extended: true }));
+
 app.get('/', (req, res) => {
     res.send('Welcome to Data Respresentation & Querying');
 });
@@ -12,6 +15,8 @@ app.get('/', (req, res) => {
 app.get('/index', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
 });
+
+app.use(express.static('public'));
 
 app.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`);
@@ -26,6 +31,12 @@ app.get('/hello/:name/:surname', (req, res) => {
     const name = req.params.name;
     const surname = req.params.surname;
     res.send(`Hello ${name} ${surname}`);
+});
+
+app.get('/name', (req, res) => {
+    const firstname = req.query.firstname;
+    const lastname = req.query.lastname;
+    res.send(`Hello ${firstname} ${lastname}`);
 });
 
 app.get('/api/movies', (req, res) => {

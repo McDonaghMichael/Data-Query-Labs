@@ -3,6 +3,10 @@ import Movies from './Movies';
 
 
 const Read = () => {
+
+    /**
+     * The following array stores the information regarding the movies such as title, year, etc
+     */
     const data = [
         {
           "Title": "Avengers: Infinity War",
@@ -26,6 +30,7 @@ const Read = () => {
           "Poster": "https://m.media-amazon.com/images/M/MV5BNDQ4YzFmNzktMmM5ZC00MDZjLTk1OTktNDE2ODE4YjM2MjJjXkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_SX300.jpg"
         }
       ];
+
     return (
         <div>
             <h3>

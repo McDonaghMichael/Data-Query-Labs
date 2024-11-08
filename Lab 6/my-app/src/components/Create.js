@@ -1,4 +1,5 @@
 import { useState } from "react";
+import axios from "axios";
 
 function Create() {
 
@@ -14,6 +15,16 @@ function Create() {
         console.log(title);
         console.log(year);
         console.log(poster);
+
+        const movie = {
+            title: title,
+            year: year,
+            poster: poster
+          };
+          
+          axios.post('http://localhost:4000/api/movies', movie)
+            .then((res) => console.log(res.data))
+            .catch((err) => console.log(err.data));
     }
 
     // Returns the form to submit new movie requests

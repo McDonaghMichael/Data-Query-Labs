@@ -11,7 +11,7 @@ const Read = () => {
   useEffect(() => {
 
   // Axios uses httpClient and fetchs the JSON from the website
-    Axios.get("https://jsonblob.com/api/jsonblob/1287718524221775872")
+    Axios.get("http://localhost:3001/api/movies")
 
       // Once a response is retreieved it will then be used below
       .then((response) => {

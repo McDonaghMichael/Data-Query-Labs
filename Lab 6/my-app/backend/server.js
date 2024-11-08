@@ -50,7 +50,14 @@ const movies = [
 ];
 
 app.post('/api/movies', (req, res) => {
-    res.status(201).json(movies);
+    movies.push({
+        "Title": req.body.title,
+        "Year": req.body.year,
+        "imdbID": "tt24323",
+        "Type": "movie",
+        "Poster": req.body.poster,
+    })
+    res.status(201).json(req.body);
 
 });
 

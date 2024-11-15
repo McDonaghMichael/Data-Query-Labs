@@ -75,3 +75,8 @@ app.get('/api/movies', async (req, res) => {
   const movies = await Movie.find({});
   res.json(movies);
 });
+
+app.get('/api/movie/:id', async (req, res) => {
+  const movie = await Movie.findById(req.params.id);
+  res.send(movie);
+});

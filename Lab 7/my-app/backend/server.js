@@ -5,6 +5,14 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 mongoose.connect('mongodb+srv://admin:ThisIsMyAdminPassword@cluster0.wha9n.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0');
 
+const movieSchema = new mongoose.Schema({
+  title: String,
+  year: String,
+  poster: String
+});
+
+const Movie = mongoose.model('Movie', movieSchema);
+
 const app = express();
 const port = 4000;
 

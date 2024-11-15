@@ -71,7 +71,7 @@ app.post('/api/movies', async (req, res) => {
 
 });
 
-app.get('/api/movies', (req, res) => {
-    res.status(201).json({ movies: movies });
-   
+app.get('/api/movies', async (req, res) => {
+  const movies = await Movie.find({});
+  res.json(movies);
 });

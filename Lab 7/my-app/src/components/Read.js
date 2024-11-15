@@ -17,7 +17,7 @@ const Read = () => {
       .then((response) => {
 
         // The array of movies will now be stored in the movies state using the state method below
-        setMovies(response.data.movies);
+        setMovies(response.data);
       })
 
       // In the event of an error occuring the code below will catch it adn log it to console

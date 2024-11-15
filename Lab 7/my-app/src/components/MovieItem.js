@@ -10,11 +10,11 @@ const MovieItem = (props) => {
     return (
     <div>
         <Card>
-        <Card.Header>{props.data.Title}</Card.Header>
+        <Card.Header>{props.data.title}</Card.Header>
         <Card.Body>
           <blockquote className="blockquote mb-0">
-            <img src={props.data.Poster} alt={props.data.Title} />
-            <footer>{props.data.Year}</footer>
+            <img src={props.data.poster} alt={props.data.title} />
+            <footer>{props.data.year}</footer>
           </blockquote>
         </Card.Body>
       </Card>

@@ -60,15 +60,14 @@ const movies = [
     }
 ];
 
-app.post('/api/movies', (req, res) => {
-    movies.push({
-        "Title": req.body.title,
-        "Year": req.body.year,
-        "imdbID": "tt24323",
-        "Type": "movie",
-        "Poster": req.body.poster,
-    })
-    res.status(201).json(req.body);
+app.post('/api/movies', async (req, res) => {
+    
+ const { title, year, poster } = req.body;
+
+ const newMovie = new Movie({ title, year, poster });
+ await newMovie.save();
+
+ res.status(201).json({ message: 'Movie created successfully', movie: newMovie });
 
 });
 

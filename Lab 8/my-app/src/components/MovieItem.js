@@ -1,4 +1,5 @@
 import Card from 'react-bootstrap/Card';
+import { Link } from 'react-router-dom';
 
 /**
  * MovieItem will display the title, year and poster of a movie
@@ -15,6 +16,7 @@ const MovieItem = (props) => {
           <blockquote className="blockquote mb-0">
             <img src={props.data.poster} alt={props.data.title} />
             <footer>{props.data.year}</footer>
+            <Link to={"/edit/" + props.data._id} className="btn btn-primary">Edit</Link>
           </blockquote>
         </Card.Body>
       </Card>

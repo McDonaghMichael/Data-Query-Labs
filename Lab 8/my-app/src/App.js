@@ -5,6 +5,7 @@ import Read from './components/Read';
 import Create from './components/Create';
 import Content from './components/global/Content';
 import NavigationBar from './components/global/NavigationBar';
+import Edit from './components/Edit';
 
 function App() {
     return (

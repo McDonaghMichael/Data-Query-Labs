@@ -77,3 +77,9 @@ app.get('/api/movie/:id', async (req, res) => {
   // Respond with the movie details
   res.send(movie);
 });
+
+// Route to update a movies specific information
+app.put('/api/movie/:id', async (req, res) => {
+  let movie = await Movie.findByIdAndUpdate(req.params.id, req.body, { new: true });
+  res.send(movie);
+});

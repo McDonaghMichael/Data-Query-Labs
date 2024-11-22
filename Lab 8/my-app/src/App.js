@@ -14,6 +14,7 @@ function App() {
                 <Route path="/home" element={<Content />} />
                 <Route path="/read" element={<Read />} />
                 <Route path="/create" element={<Create />} />
+                <Route path='/edit/:id' element={<Edit />} />
             </Routes>
             <Footer />
         </Router>

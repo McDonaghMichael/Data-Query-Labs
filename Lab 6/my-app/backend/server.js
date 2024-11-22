@@ -58,7 +58,6 @@ app.post('/api/movies', (req, res) => {
         "Poster": req.body.poster,
     })
     res.status(201).json(req.body);
-
 });
 
 app.get('/api/movies', (req, res) => {

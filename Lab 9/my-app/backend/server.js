@@ -84,10 +84,17 @@ app.put('/api/movie/:id', async (req, res) => {
   res.send(movie);
 });
 
+// DELETE endpoint to remove a movie by its ID
 app.delete('/api/movie/:id', async (req, res) => {
   
-  console.log('Deleting movie with ID:', req.params.id);
-  const movie = await Movie.findByIdAndDelete(req.params.id);
-  res.status(200).send({ message: "Movie deleted successfully", movie });
+  console.log('Deleting movie with ID:', req.params.id); // Log the ID of the movie being deleted
   
+  // Find and delete the movie from the database by ID
+  const movie = await Movie.findByIdAndDelete(req.params.id);
+  
+  // Respond with a success message and the deleted movie data
+  res.status(200).send({ 
+    message: "Movie deleted successfully", 
+    movie 
+  });
 });

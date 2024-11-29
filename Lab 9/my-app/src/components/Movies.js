@@ -10,7 +10,7 @@ const Movies = (props) => {
 
         
         // MovieItem is called and each of the movies data is passed into the object
-        <MovieItem data={movie} key={movie._id} />
+        <MovieItem data={movie} key={movie._id} Reload={props.ReloadData} />
       ));
 }
 

@@ -7,6 +7,21 @@ const Read = () => {
   // The array of movie data is stored in this state and will be retreived from here
   const [movies, setMovies] = useState([]);
 
+  const Reload = () => {
+        console.log("Reloading movie data...");
+        Axios.get('http://localhost:4000/api/movies')
+            .then((response) => {
+                setMovies(response.data);
+            })
+            .catch((error) => {
+                console.error("Error reloading data:", error);
+            });
+    };
+
+    useEffect(() => {
+        Reload();
+    }, []);
+
   // useEffect is used when fetching data as it will be rendering into one of our components
   useEffect(() => {
 
@@ -33,7 +48,7 @@ const Read = () => {
             <h3>
                 Hello from read component
             </h3>
-            <Movies movieData={movies}/>
+            <Movies movieData={movies} ReloadData={Reload}/>
         </div>
     );
 }
